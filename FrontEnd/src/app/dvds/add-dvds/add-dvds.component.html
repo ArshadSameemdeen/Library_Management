@@ -1,0 +1,42 @@
+<!-- Adding navigation bar to the add dvd page -->
+<app-navigation-bar></app-navigation-bar>
+
+<!-- adding bootstrap classes from w3school for styling the add book class in attractive manner -->
+<div class="container">
+    <div class="jumbotron">
+      <h1>Add DVDs</h1>
+  <div class="ro">
+    <div class="col-xs-10">
+                <!-- a ng submit method with awakens the setdvds method to set data to the backend is called in the form -->
+            <form name="submitted" action="submit" (ngSubmit)="setdvds(f)"  #f="ngForm">
+<!-- ng model is used to equalize the user input title to the title attribute which we send to the backend, which needs to be added to the database           -->
+<label>Tile: </label>
+<input name="title1" type="text" 
+[(ngModel)]="title">
+<hr>
+<!-- ng model is used to equalize the user input language to the language attribute which we send to the backend, which needs to be added to the database           -->
+<label>Available language: </label>
+<input name="language1" type="text"
+[(ngModel)]="language">
+<hr>
+<!-- ng model is used to equalize the user input subtitles to the subtitles attribute which we send to the backend, which needs to be added to the database           -->
+<label>Subtitles: </label>
+<input name="subtitles1" type="text"
+[(ngModel)]="subtitles">
+<hr>
+<!-- ng model is used to equalize the user input producer name to the producer name attribute which we send to the backend, which needs to be added to the database           -->
+<label>Producer: </label>
+<input name="producer1" type="text"
+[(ngModel)]="producer">
+<hr>
+<!-- ng model is used to equalize the user input actor name to the actor name attribute which we send to the backend, which needs to be added to the database           -->
+<label>Actor: </label>
+<input name="actor1" type="text"
+[(ngModel)]="actor">
+      <hr>
+      <input type="submit" value="Add" class="btn btn-success">
+      </form>
+</div>
+</div>
+</div>
+</div>

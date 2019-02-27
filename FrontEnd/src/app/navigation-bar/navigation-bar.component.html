@@ -1,0 +1,40 @@
+<!-- Added specific bootstrap classes for navigation bar got from w3schools to make it nice looking -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        
+        <a class="navbar-brand" >UOW Library</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        
+          <ul class="nav navbar-nav navbar-right" >
+
+   <!-- list s are added in the navigation bar for the options of the site -->
+      <li ><a routerLink='/home'>Home</a></li>
+      
+      <!-- Specific dropdown bootstrap is used for the dropdown menu -->
+      <!-- methods to activate the toggle dropdown menu is conected here -->
+      <li class="dropdown" appDropdown>
+        <a style="cursor: pointer;" class="dropdown-toggle" role="button">Book <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/add-books">Add Books</a></li>
+            <li><a routerLink="/view-books">View Books</a></li>
+          </ul>
+        </li>
+         <!-- Specific dropdown bootstrap is used for the dropdown menu -->
+      <!-- methods to activate the toggle dropdown menu is conected here -->
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">DVD <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/add-dvds">Add DVDs</a></li>
+              <li><a routerLink="/view-dvds">View DVDs</a></li>
+            </ul>
+          </li>
+      <!-- <li><a routerLink="/books">Books</a></li>
+      <li><a routerLink="/dvds">DVDs</a></li> -->
+
+    <li><a routerLink='/login'><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+  </ul>
+  </div>
+  </div>
+</nav>

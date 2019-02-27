@@ -1,0 +1,47 @@
+<!-- <div class="jumbotron text-center">
+  <h1 height="10px" width="100px">UOW</h1>
+<h2>Library</h2>
+<form (submit)="loginUser($event)">
+<input type="text" placeholder="Email ID" id="id">
+<hr>
+<input type="password" placeholder="Password" id="password"><hr>
+<input type="submit" value="Login">
+</form>
+</div> -->
+<!-- Automatically adding bootstrp classes from w3schools for the page styling -->
+<div class="container">
+    <div class="jumbotron">
+<h2 >Welcome to UOW Library Management</h2>
+
+
+<!-- using submit method to awaken loginuser method in the typescript class using event -->
+<form (submit)="loginUser($event)">
+  <div class="imgcontainer">
+    <img src="assets/s774058804322417752_p1199_i9_w640.jpeg" alt="Avatar" class="avatar">
+  </div>
+
+  <!-- saperating this container using bootstrap class -->
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <!-- used input type to password so that it cant be seen by outsiders -->
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <!-- additional content for easy making of the logging in -->
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</div>
+</div>
+
+

@@ -1,0 +1,43 @@
+<!-- Adding navigation bar to the view book page -->
+<app-navigation-bar></app-navigation-bar>
+
+<!-- using bootstrap style classes got from w3school to automatically style the view book page -->
+<div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <!-- resized the image in the img tag itself instead of doing it in the view book component css -->
+      <img src="assets/TIN-332 Books from_large.jpg" alt="New York" width="1200" height="700">
+      <div class="carousel-caption">
+        <h3>Books are</h3>
+        <p>the most loyal and trusted friend you can ever have.</p>
+      </div>      
+    </div>
+<!-- using a different bootstrap styling to differenciate the data displaying in a nicer way -->
+<div class="container">
+  <div class="jumbotron">
+    <h1>Books</h1>
+<div class="ro">
+  <div class="col-xs-10">
+    <!-- using ng for loop to get data obtained from the backend to display in this view book page dynamically as we add data in add book class -->
+    <!-- let i is used for deletion method -->
+    <ul class="list-group-item" *ngFor="let Books of booksArray ; let i=index">
+      
+      <!-- getting the title, isbn data coming from the backend to specifically display here -->
+      <a class="list-group-item" style="cursor: pointer" ><p>{{Books.title}} </p><p>({{Books.ISBN}}) </p>
+        <!-- click methos is used to awaken delete method from the typescript class for deletion process -->
+        <button type="reset" class="btn btn-danger" (click)="delete(i)">delete</button></a>
+ 
+     
+    
+      
+    </ul>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- <div *ngFor="let Book of Books">
+
+  <h1>title: {{Books.title}}</h1>
+
+</div> -->

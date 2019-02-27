@@ -1,0 +1,48 @@
+<!-- Adding navigation bar to the add book page -->
+<app-navigation-bar></app-navigation-bar>
+
+<!-- adding bootstrap classes from w3school for styling the add book class in attractive manner -->
+<div class="container">
+        <div class="jumbotron">
+          <h1>Add Books</h1>
+      <div class="ro">
+        <div class="col-xs-10">
+          <!-- a ng submit method with awakens the setemplyoee method to set data to the backend is called in the form -->
+          <form name="submitted" action="submit" (ngSubmit)="setemployees(f)"  #f="ngForm">
+<!-- ng model is used to equalize the user input isbm to the isbm attribute which we send to the backend, which needs to be added to the database           -->
+<label>ISBN: </label>
+<input name="isbm1" type="text"
+[(ngModel)]="ISBM">
+<hr>
+<!-- ng model is used to equalize the user input title to the title attribute which we send to the backend, which needs to be added to the database           -->
+<label>Tile: </label>
+<input name="title1" type="text"
+[(ngModel)]="title">
+<hr>
+<!-- ng model is used to equalize the user input author to the author attribute which we send to the backend, which needs to be added to the database           -->
+<label>Author: </label>
+<input name="author1" type="text"
+[(ngModel)]="author">
+<hr>
+<!-- ng model is used to equalize the user input publisher to the publisher attribute which we send to the backend, which needs to be added to the database           -->
+<label>Publisher: </label>
+<input name="publisher1" type="text"
+[(ngModel)]="publisher">
+          <hr>
+<!-- ng model is used to equalize the user input number of pages to the number of pages attribute which we send to the backend, which needs to be added to the database           -->
+<label>Number Pages: </label>
+<input name="pages1" type="text"
+[(ngModel)]="pages">
+<hr>
+<!-- ng model is used to equalize the user input published date to the published date attribute which we send to the backend, which needs to be added to the database           -->
+<label>Date: </label>
+<input  name="date1" type="text"
+[(ngModel)]="date">
+          <hr>
+          <input type="submit" value="Add" class="btn btn-success" >
+          </form >
+
+</div>
+</div>
+</div>
+</div>
